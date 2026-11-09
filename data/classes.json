@@ -1,0 +1,420 @@
+{
+  "metadata": {
+    "generated_at": "2026-11-02",
+    "phase": "Phase 2: Dataset Preparation & Food Classes",
+    "project": "AI-Based Food Recognition and Personalized Nutrition Tracking System",
+    "description": "Curated food classes and dataset analysis for AI food recognition and nutrition tracking (Reviewed)",
+    "class_balance_status": "Raw dataset exhibits varying class sizes (229 to 1,000 images); class balancing is deferred to model-data preparation.",
+    "nutrition_status": "No nutrition data is defined here; nutritional profiles will be established independently in Phase 3 from verified sources."
+  },
+  "candidate_datasets": {
+    "bharat-raghunathan/indian-foods-dataset": {
+      "source": "Hugging Face (bharat-raghunathan/indian-foods-dataset)",
+      "original_source": "Kaggle (The Massive Indian Food Dataset by anshulmehtakaggl)",
+      "license": "CC0-1.0 (Public Domain)",
+      "format": "Parquet (300x300 PNG images with class labels)",
+      "total_images": 4770,
+      "splits": {
+        "train": 3809,
+        "test": 961
+      },
+      "class_count": 15,
+      "classes": {
+        "biryani": 229,
+        "cholebhature": 326,
+        "dabeli": 220,
+        "dal": 261,
+        "dhokla": 248,
+        "dosa": 170,
+        "jalebi": 306,
+        "kathiroll": 340,
+        "kofta": 667,
+        "naan": 353,
+        "pakora": 377,
+        "paneer": 259,
+        "panipuri": 177,
+        "pavbhaji": 301,
+        "vadapav": 536
+      }
+    },
+    "ewanlong/Food_Classification_Dataset": {
+      "source": "Hugging Face (ewanlong/Food_Classification_Dataset)",
+      "original_source": "Kaggle (Food Image Classification Dataset by Harish Kumar)",
+      "license": "CC0-1.0 (Public Domain)",
+      "format": "ZIP archive with folder structure (JPEG/PNG variable resolution)",
+      "total_images": 23873,
+      "splits": "No predefined train/test split (flat directory structure)",
+      "class_count": 34,
+      "classes": {
+        "Hot Dog": 1548,
+        "Sandwich": 1500,
+        "Donut": 1500,
+        "Crispy Chicken": 1500,
+        "Baked Potato": 1500,
+        "Fries": 1500,
+        "Taquito": 1500,
+        "Taco": 1500,
+        "ice_cream": 1000,
+        "chicken_curry": 1000,
+        "cheesecake": 1000,
+        "apple_pie": 1000,
+        "omelette": 1000,
+        "sushi": 1000,
+        "chole_bhature": 376,
+        "fried_rice": 350,
+        "chai": 344,
+        "kadai_paneer": 334,
+        "burger": 331,
+        "chapati": 327,
+        "momos": 323,
+        "butter_naan": 307,
+        "pav_bhaji": 305,
+        "idli": 302,
+        "dal_makhani": 295,
+        "jalebi": 288,
+        "kaathi_rolls": 279,
+        "pizza": 275,
+        "masala_dosa": 273,
+        "pakode": 269,
+        "dhokla": 245,
+        "samosa": 244,
+        "kulfi": 214,
+        "paani_puri": 144
+      }
+    }
+  },
+  "recommended_class_set": [
+    {
+      "class_name": "biryani",
+      "display_name": "Biryani",
+      "cuisine": "Indian",
+      "category": "Main Dish (Rice)",
+      "sources": [{"dataset": "bharat-raghunathan", "original_class": "biryani", "images": 229}],
+      "total_images": 229,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Core Indian rice dish, distinctive layered spices and grains."
+    },
+    {
+      "class_name": "burger",
+      "display_name": "Burger",
+      "cuisine": "International",
+      "category": "Fast Food / Main",
+      "sources": [{"dataset": "ewanlong", "original_class": "burger", "images": 331}],
+      "total_images": 331,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Core international staple, high visual distinction."
+    },
+    {
+      "class_name": "chapati",
+      "display_name": "Chapati / Roti",
+      "cuisine": "Indian",
+      "category": "Bread / Staple",
+      "sources": [{"dataset": "ewanlong", "original_class": "chapati", "images": 327}],
+      "total_images": 327,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Unleavened whole wheat flatbread, fundamental Indian daily staple."
+    },
+    {
+      "class_name": "chicken_curry",
+      "display_name": "Chicken Curry",
+      "cuisine": "Indian / Asian",
+      "category": "Curry / Poultry",
+      "sources": [{"dataset": "ewanlong", "original_class": "chicken_curry", "images": 1000}],
+      "total_images": 1000,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Primary animal protein dish; raw counts exhibit class imbalance and can be balanced during model-data preparation."
+    },
+    {
+      "class_name": "chole_bhature",
+      "display_name": "Chole Bhature",
+      "cuisine": "Indian",
+      "category": "Main Dish / Breakfast",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "cholebhature", "images": 326},
+        {"dataset": "ewanlong", "original_class": "chole_bhature", "images": 376}
+      ],
+      "total_images": 702,
+      "review_decision": "MERGE_EXACT_EQUIVALENT",
+      "decision_note": "Exact culinary and visual equivalent across both datasets."
+    },
+    {
+      "class_name": "dal",
+      "display_name": "Dal (Yellow / Split Lentils)",
+      "cuisine": "Indian",
+      "category": "Curry / Legume",
+      "sources": [{"dataset": "bharat-raghunathan", "original_class": "dal", "images": 261}],
+      "total_images": 261,
+      "review_decision": "KEEP_SEPARATE",
+      "decision_note": "Kept separate from dal_makhani. Generic dal represents yellow split-lentil tadka/fry (light legume preparation), visually golden/yellow with cumin and mustard seeds."
+    },
+    {
+      "class_name": "dal_makhani",
+      "display_name": "Dal Makhani",
+      "cuisine": "Indian",
+      "category": "Curry / Legume",
+      "sources": [{"dataset": "ewanlong", "original_class": "dal_makhani", "images": 295}],
+      "total_images": 295,
+      "review_decision": "KEEP_SEPARATE",
+      "decision_note": "Kept separate from generic dal. Represents whole black urad lentils and kidney beans cooked with butter and fresh cream, visually dark brown/black with cream swirls."
+    },
+    {
+      "class_name": "dhokla",
+      "display_name": "Dhokla",
+      "cuisine": "Indian",
+      "category": "Snack / Breakfast",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "dhokla", "images": 248},
+        {"dataset": "ewanlong", "original_class": "dhokla", "images": 245}
+      ],
+      "total_images": 493,
+      "review_decision": "MERGE_EXACT_EQUIVALENT",
+      "decision_note": "Exact match across both datasets; yellow steamed spongy fermented chickpea cakes."
+    },
+    {
+      "class_name": "dosa",
+      "display_name": "Dosa",
+      "cuisine": "Indian",
+      "category": "Breakfast / Main",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "dosa", "images": 170},
+        {"dataset": "ewanlong", "original_class": "masala_dosa", "images": 273}
+      ],
+      "total_images": 443,
+      "review_decision": "MERGE",
+      "decision_note": "Merged. Plain and masala dosa are visually indistinguishable when rolled or folded (the spiced potato filling is concealed inside the opaque fermented crepe). Prevents arbitrary classifier guessing while resolving the smaller sample size of plain dosa (170 images)."
+    },
+    {
+      "class_name": "fried_rice",
+      "display_name": "Fried Rice",
+      "cuisine": "Asian / International",
+      "category": "Main Dish (Rice)",
+      "sources": [{"dataset": "ewanlong", "original_class": "fried_rice", "images": 350}],
+      "total_images": 350,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Core international grain dish, distinct appearance from biryani."
+    },
+    {
+      "class_name": "idli",
+      "display_name": "Idli",
+      "cuisine": "Indian",
+      "category": "Breakfast / Snack",
+      "sources": [{"dataset": "ewanlong", "original_class": "idli", "images": 302}],
+      "total_images": 302,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Iconic white steamed fermented rice cakes, clean South Indian breakfast staple."
+    },
+    {
+      "class_name": "jalebi",
+      "display_name": "Jalebi",
+      "cuisine": "Indian",
+      "category": "Dessert / Sweet",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "jalebi", "images": 306},
+        {"dataset": "ewanlong", "original_class": "jalebi", "images": 288}
+      ],
+      "total_images": 594,
+      "review_decision": "MERGE_EXACT_EQUIVALENT",
+      "decision_note": "Exact match; distinctive spiral orange syrup dessert."
+    },
+    {
+      "class_name": "kadai_paneer",
+      "display_name": "Kadai Paneer",
+      "cuisine": "Indian",
+      "category": "Curry / Vegetarian Protein",
+      "sources": [{"dataset": "ewanlong", "original_class": "kadai_paneer", "images": 334}],
+      "total_images": 334,
+      "review_decision": "KEEP_SEPARATE",
+      "decision_note": "Kept separate from generic paneer. Specific dish featuring prominent sauteed green bell peppers (capsicum), onion petals, and coarse coriander wok spices in a chunky tomato masala."
+    },
+    {
+      "class_name": "kathi_roll",
+      "display_name": "Kathi Roll",
+      "cuisine": "Indian",
+      "category": "Street Food / Wrap",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "kathiroll", "images": 340},
+        {"dataset": "ewanlong", "original_class": "kaathi_rolls", "images": 279}
+      ],
+      "total_images": 619,
+      "review_decision": "MERGE_EXACT_EQUIVALENT",
+      "decision_note": "Exact spelling variation (kathiroll vs kaathi_rolls); Indian flatbread wrap with fillings."
+    },
+    {
+      "class_name": "momos",
+      "display_name": "Momos",
+      "cuisine": "Tibetan / Indian Street Food",
+      "category": "Dumpling / Snack",
+      "sources": [{"dataset": "ewanlong", "original_class": "momos", "images": 323}],
+      "total_images": 323,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Pleated steamed dumplings, popular street food snack."
+    },
+    {
+      "class_name": "naan",
+      "display_name": "Naan",
+      "cuisine": "Indian",
+      "category": "Bread / Staple",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "naan", "images": 353},
+        {"dataset": "ewanlong", "original_class": "butter_naan", "images": 307}
+      ],
+      "total_images": 660,
+      "review_decision": "MERGE",
+      "decision_note": "Merged. Plain naan and butter naan are the identical leavened tandoori flatbread. Computer vision cannot reliably distinguish melted butter gloss from photographic flash or specular highlights across unstandardized images."
+    },
+    {
+      "class_name": "pakora",
+      "display_name": "Pakora / Pakode",
+      "cuisine": "Indian",
+      "category": "Snack / Fritter",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "pakora", "images": 377},
+        {"dataset": "ewanlong", "original_class": "pakode", "images": 269}
+      ],
+      "total_images": 646,
+      "review_decision": "MERGE_EXACT_EQUIVALENT",
+      "decision_note": "Exact linguistic variation (pakora vs pakode); deep-fried gram flour fritters."
+    },
+    {
+      "class_name": "paneer_curry",
+      "display_name": "Paneer Curry / Butter Masala",
+      "cuisine": "Indian",
+      "category": "Curry / Vegetarian Protein",
+      "sources": [{"dataset": "bharat-raghunathan", "original_class": "paneer", "images": 259}],
+      "total_images": 259,
+      "review_decision": "KEEP_SEPARATE",
+      "decision_note": "Kept separate from kadai_paneer. Represents rich, smooth tomato-cream-cashew paneer gravies (Paneer Butter Masala, Shahi Paneer) without green bell peppers."
+    },
+    {
+      "class_name": "pani_puri",
+      "display_name": "Pani Puri",
+      "cuisine": "Indian",
+      "category": "Street Food / Snack",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "panipuri", "images": 177},
+        {"dataset": "ewanlong", "original_class": "paani_puri", "images": 144}
+      ],
+      "total_images": 321,
+      "review_decision": "MERGE_EXACT_EQUIVALENT",
+      "decision_note": "Exact spelling variation (panipuri vs paani_puri); hollow crisp puries filled with flavored water."
+    },
+    {
+      "class_name": "pav_bhaji",
+      "display_name": "Pav Bhaji",
+      "cuisine": "Indian",
+      "category": "Street Food / Main",
+      "sources": [
+        {"dataset": "bharat-raghunathan", "original_class": "pavbhaji", "images": 301},
+        {"dataset": "ewanlong", "original_class": "pav_bhaji", "images": 305}
+      ],
+      "total_images": 606,
+      "review_decision": "MERGE_EXACT_EQUIVALENT",
+      "decision_note": "Exact match across both datasets; spiced mashed vegetable mash served with buttered rolls."
+    },
+    {
+      "class_name": "pizza",
+      "display_name": "Pizza",
+      "cuisine": "International",
+      "category": "Fast Food / Main",
+      "sources": [{"dataset": "ewanlong", "original_class": "pizza", "images": 275}],
+      "total_images": 275,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Core international staple, high visual distinction."
+    },
+    {
+      "class_name": "samosa",
+      "display_name": "Samosa",
+      "cuisine": "Indian",
+      "category": "Snack / Pastry",
+      "sources": [{"dataset": "ewanlong", "original_class": "samosa", "images": 244}],
+      "total_images": 244,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Iconic triangular fried pastry with spiced potato filling."
+    },
+    {
+      "class_name": "vada_pav",
+      "display_name": "Vada Pav",
+      "cuisine": "Indian",
+      "category": "Street Food / Snack",
+      "sources": [{"dataset": "bharat-raghunathan", "original_class": "vadapav", "images": 536}],
+      "total_images": 536,
+      "review_decision": "KEPT_SEPARATE",
+      "decision_note": "Signature Mumbai street food; deep-fried potato dumpling inside a bread bun."
+    }
+  ],
+  "optional_extended_classes": [
+    {
+      "class_name": "dabeli",
+      "display_name": "Dabeli",
+      "cuisine": "Indian",
+      "total_images": 220,
+      "source": "bharat-raghunathan",
+      "review_status": "NOT_RECOMMENDED",
+      "note": "Street food bun; visually resembles burger and vada pav, risking high false positive rates among bun snacks."
+    },
+    {
+      "class_name": "kofta",
+      "display_name": "Kofta",
+      "cuisine": "Indian",
+      "total_images": 667,
+      "source": "bharat-raghunathan",
+      "review_status": "NOT_RECOMMENDED",
+      "note": "Round dumplings in thick gravy; visually confused with paneer_curry gravy when dumplings are submerged."
+    },
+    {
+      "class_name": "omelette",
+      "display_name": "Omelette",
+      "cuisine": "International",
+      "total_images": 1000,
+      "source": "ewanlong",
+      "review_status": "NOT_RECOMMENDED",
+      "note": "Quality egg dish, but 23 classes already provides dietary protein coverage; deferring additions to avoid extra complexity."
+    },
+    {
+      "class_name": "sandwich",
+      "display_name": "Sandwich",
+      "cuisine": "International",
+      "total_images": 1500,
+      "source": "ewanlong",
+      "review_status": "NOT_RECOMMENDED",
+      "note": "High intra-class visual variance and duplicate images; burger already covers the handheld bread meal category."
+    }
+  ],
+  "excluded_classes": [
+    {
+      "class_name": "chai",
+      "images": 344,
+      "reason": "Beverage (liquid tea in cups), not a plated solid food or meal item."
+    },
+    {
+      "class_name": "Taquito",
+      "images": 1500,
+      "reason": "Highly regional Mexican snack with duplicate images; low relevance to target user demographic."
+    },
+    {
+      "class_name": "Donut",
+      "images": 1500,
+      "reason": "Pure sugar dessert; skewed sample size."
+    },
+    {
+      "class_name": "ice_cream",
+      "images": 1000,
+      "reason": "Dessert; rapidly melts, presentation varies wildly."
+    },
+    {
+      "class_name": "cheesecake",
+      "images": 1000,
+      "reason": "Western dessert with high visual similarity to other sliced cakes."
+    },
+    {
+      "class_name": "apple_pie",
+      "images": 1000,
+      "reason": "Western dessert."
+    },
+    {
+      "class_name": "kulfi",
+      "images": 214,
+      "reason": "Indian frozen dessert on stick or earthenware pot; minor meal tracking utility compared to main dishes."
+    }
+  ]
+}

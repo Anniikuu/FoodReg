@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "phase": "Phase 4 - Step 2: Deduplication Manifest & Group-Aware Split",
+    "seed": 42,
+    "leakage_status": "PASSED_ZERO_LEAKAGE"
+  },
+  "summary": {
+    "original_images": 10150,
+    "exact_duplicate_groups": 639,
+    "exact_duplicates_excluded": 784,
+    "final_retained_images": 9366,
+    "total_leakage_groups": 9286,
+    "train_count": 6554,
+    "val_count": 1406,
+    "test_count": 1406,
+    "train_percentage": 69.98,
+    "val_percentage": 15.01,
+    "test_percentage": 15.01
+  },
+  "per_class_breakdown": {
+    "biryani": {
+      "train": 156,
+      "val": 33,
+      "test": 34
+    },
+    "chole_bhature": {
+      "train": 442,
+      "val": 95,
+      "test": 94
+    },
+    "dal": {
+      "train": 177,
+      "val": 38,
+      "test": 38
+    },
+    "dhokla": {
+      "train": 308,
+      "val": 66,
+      "test": 66
+    },
+    "dosa": {
+      "train": 290,
+      "val": 62,
+      "test": 63
+    },
+    "jalebi": {
+      "train": 384,
+      "val": 82,
+      "test": 82
+    },
+    "kathi_roll": {
+      "train": 375,
+      "val": 80,
+      "test": 81
+    },
+    "naan": {
+      "train": 447,
+      "val": 96,
+      "test": 95
+    },
+    "pakora": {
+      "train": 428,
+      "val": 92,
+      "test": 92
+    },
+    "paneer_curry": {
+      "train": 176,
+      "val": 38,
+      "test": 38
+    },
+    "pani_puri": {
+      "train": 202,
+      "val": 43,
+      "test": 43
+    },
+    "pav_bhaji": {
+      "train": 386,
+      "val": 83,
+      "test": 82
+    },
+    "vada_pav": {
+      "train": 176,
+      "val": 38,
+      "test": 37
+    },
+    "burger": {
+      "train": 229,
+      "val": 49,
+      "test": 49
+    },
+    "chapati": {
+      "train": 224,
+      "val": 48,
+      "test": 48
+    },
+    "chicken_curry": {
+      "train": 700,
+      "val": 150,
+      "test": 150
+    },
+    "dal_makhani": {
+      "train": 199,
+      "val": 43,
+      "test": 42
+    },
+    "fried_rice": {
+      "train": 244,
+      "val": 52,
+      "test": 53
+    },
+    "idli": {
+      "train": 206,
+      "val": 44,
+      "test": 45
+    },
+    "kadai_paneer": {
+      "train": 229,
+      "val": 50,
+      "test": 50
+    },
+    "momos": {
+      "train": 219,
+      "val": 47,
+      "test": 47
+    },
+    "pizza": {
+      "train": 190,
+      "val": 41,
+      "test": 41
+    },
+    "samosa": {
+      "train": 167,
+      "val": 36,
+      "test": 36
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "COMPLETED",
+  "evaluation_timestamp": "2026-11-02T23:31:13.823020",
+  "evaluation_duration_seconds": 14.3,
+  "model_checkpoint_evaluated": "models/stage_b_best.pth",
+  "production_model_verified": "models/mobilenetv2_food_classifier.pth",
+  "model_architecture": "MobileNetV2 (ImageNet weights, features[14..18] + 23-class classifier head fine-tuned)",
+  "evaluation_device": "cuda:0 (NVIDIA GeForce RTX 4050 Laptop GPU)",
+  "dataset": {
+    "test_manifest": "data/manifests/test_manifest.csv",
+    "test_sample_count": 1406,
+    "num_classes": 23,
+    "class_mapping_source": "data/class_indices.json"
+  },
+  "overall_metrics": {
+    "test_accuracy": 0.8649,
+    "macro_precision": 0.8524,
+    "macro_recall": 0.8717,
+    "macro_f1": 0.8573,
+    "weighted_precision": 0.8748,
+    "weighted_recall": 0.8649,
+    "weighted_f1": 0.8653
+  },
+  "prediction_counts": {
+    "total_samples": 1406,
+    "correct_count": 1216,
+    "incorrect_count": 190,
+    "error_rate": 0.1351
+  },
+  "confidence_analysis": {
+    "average_confidence": 0.8034,
+    "correct_prediction_confidence_avg": 0.8466,
+    "incorrect_prediction_confidence_avg": 0.5264,
+    "engineering_low_confidence_threshold": 0.5,
+    "low_confidence_prediction_count": 181,
+    "low_confidence_correct_count": 87,
+    "low_confidence_incorrect_count": 94
+  },
+  "artifacts_created": {
+    "test_predictions": "models/test_predictions.csv",
+    "per_class_metrics": "models/per_class_metrics.json",
+    "confusion_matrix_json": "models/confusion_matrix.json",
+    "confusion_matrix_png": "models/confusion_matrix.png",
+    "error_analysis": "models/error_analysis.json",
+    "evaluation_summary": "models/evaluation_summary.json"
+  }
+}

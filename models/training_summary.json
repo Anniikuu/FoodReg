@@ -1,0 +1,40 @@
+{
+  "status": "COMPLETED",
+  "created_at": "2026-11-02T23:23:48.444192",
+  "total_duration_seconds": 1703.88,
+  "total_duration_human": "28m 23s",
+  "hardware": {
+    "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+    "cuda_available": true,
+    "vram_gb": 6.0,
+    "oom_events": 0,
+    "batch_size": 32
+  },
+  "dataset": {
+    "num_classes": 23,
+    "train_samples": 6554,
+    "val_samples": 1406,
+    "test_manifest_untouched": true
+  },
+  "stage_a": {
+    "epochs_completed": 15,
+    "best_epoch": 15,
+    "best_train_loss": 1.1445,
+    "best_train_acc": 0.7528,
+    "best_val_loss": 1.193,
+    "best_val_acc": 0.7432,
+    "checkpoint_path": "models/stage_a_best.pth"
+  },
+  "stage_b": {
+    "epochs_completed": 15,
+    "best_epoch": 15,
+    "best_train_loss": 0.4038,
+    "best_train_acc": 0.884,
+    "best_val_loss": 0.4248,
+    "best_val_acc": 0.8848,
+    "fine_tuned_layers": "features[14..18] + classifier",
+    "learning_rate": 1e-05,
+    "checkpoint_path": "models/stage_b_best.pth",
+    "primary_model_path": "models/mobilenetv2_food_classifier.pth"
+  }
+}

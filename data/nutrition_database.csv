@@ -1,0 +1,25 @@
+food_id,food_name,canonical_name,food_category,preparation,calories_kcal_100g,protein_g_100g,carbs_g_100g,fat_g_100g,fiber_g_100g,source,source_food_id,nutrition_status
+FOOD_001,Biryani,biryani,Main Dish (Rice),Cooked mixed rice with chicken and spices,104.0,7.15,13.55,2.38,1.1,USDA_FNDDS,2706538,verified
+FOOD_002,Burger,burger,Fast Food / Main,Cooked ground beef patty on bun with condiments,288.0,17.51,20.68,14.38,0.7,USDA_FNDDS,2706920,verified
+FOOD_003,Chapati / Roti,chapati,Bread / Staple,Dry-roasted unleavened whole wheat flatbread,299.0,7.85,46.13,9.2,9.7,USDA_FNDDS,2707713,verified
+FOOD_004,Chicken Curry,chicken_curry,Curry / Poultry,Stewed chicken pieces in spiced tomato-onion gravy,107.0,6.48,6.54,6.48,1.4,USDA_FNDDS,2706437,verified
+FOOD_005,Chole Bhature,chole_bhature,Main Dish / Breakfast,Spiced chickpea curry served with deep-fried leavened bread,,,,,,UNRESOLVED,,unresolved
+FOOD_006,Dal (Yellow / Split Lentils),dal,Curry / Legume,Boiled split lentils tempered with cumin and spices,145.0,8.6,19.17,4.31,7.5,USDA_FNDDS,2707427,verified
+FOOD_007,Dal Makhani,dal_makhani,Curry / Legume,Slow-cooked whole black lentils and kidney beans with butter and cream,74.04,3.32,7.96,3.06,2.27,INDB,OSR139,verified
+FOOD_008,Dhokla,dhokla,Snack / Breakfast,Steamed fermented chickpea flour savory cake,216.49,13.45,30.68,5.28,4.95,INDB,ASC474,verified
+FOOD_009,Dosa,dosa,Breakfast / Main,Fermented rice-lentil crepe cooked with potato filling,184.0,5.46,30.8,4.27,2.2,USDA_FNDDS,2709129,verified
+FOOD_010,Fried Rice,fried_rice,Main Dish (Rice),Wok-tossed cooked rice with vegetables and oil,174.0,3.84,32.5,3.19,1.1,USDA_FNDDS,2708951,verified
+FOOD_011,Idli,idli,Breakfast / Snack,Steamed cakes of fermented rice and black gram batter,128.0,6.36,24.98,0.35,5.8,USDA_FNDDS,2708346,verified
+FOOD_012,Jalebi,jalebi,Dessert / Sweet,Deep-fried fermented wheat batter spirals soaked in sugar syrup,,,,,,UNRESOLVED,,unresolved
+FOOD_013,Kadai Paneer,kadai_paneer,Curry / Vegetarian Protein,Sautéed paneer cubes with bell peppers and coriander in chunky tomato gravy,107.99,4.33,7.34,6.81,2.07,INDB,ASC226,verified
+FOOD_014,Kathi Roll,kathi_roll,Street Food / Wrap,Griddled paratha flatbread rolled with seasoned filling,285.94,6.92,20.1,19.55,2.4,INDB,ASC149,verified
+FOOD_015,Momos,momos,Dumpling / Snack,Steamed flour dumplings filled with minced seasoned vegetables or meat,,,,,,UNRESOLVED,,unresolved
+FOOD_016,Naan,naan,Bread / Staple,Tandoor-baked leavened refined wheat flatbread,311.0,11.09,50.23,7.28,5.2,USDA_FNDDS,2707613,verified
+FOOD_017,Pakora / Pakode,pakora,Snack / Fritter,Deep-fried vegetable fritters dipped in seasoned gram flour batter,125.0,4.92,16.24,4.77,3.2,USDA_FNDDS,2710066,verified
+FOOD_018,Paneer Curry / Butter Masala,paneer_curry,Curry / Vegetarian Protein,Paneer cheese cubes simmered in spiced tomato or spinach gravy,101.0,5.42,4.28,7.02,0.9,USDA_FNDDS,2709631,verified
+FOOD_019,Pani Puri,pani_puri,Street Food / Snack,Crisp hollow fried spheres filled with potatoes and flavored water,,,,,,UNRESOLVED,,unresolved
+FOOD_020,Pav Bhaji,pav_bhaji,Street Food / Main,Spiced mashed mixed vegetable gravy cooked with butter and served with soft bread rolls,96.53,2.66,11.99,4.32,1.98,INDB,OSR112,verified
+FOOD_021,Pizza,pizza,Fast Food / Main,Baked dough crust topped with tomato sauce and melted cheese,266.0,11.39,33.33,9.69,2.3,USDA_FNDDS,2708614,verified
+FOOD_022,Samosa,samosa,Snack / Pastry,Deep-fried triangular pastry crust stuffed with spiced potatoes and peas,310.0,5.14,33.16,17.47,1.8,USDA_FNDDS,2708730,verified
+FOOD_023,Vada Pav,vada_pav,Street Food / Snack,Deep-fried spiced potato dumpling tucked inside a soft bread bun with chutneys,,,,,,UNRESOLVED,,unresolved
+

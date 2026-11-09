@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/
+
+# Testing & Caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Datasets and Staging Images
+data/raw/
+data/staging/
+
+# Local User Data (runtime records)
+data/meal_log.csv
+data/user_profile.json
+
+# Model Weights and Checkpoints
+*.pth
+*.pt
+models/*.pth
+models/*.pt
+
+# Environment and Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Logs and Temporary Experiment Outputs
+*.log
+
+

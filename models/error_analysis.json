@@ -1,0 +1,206 @@
+{
+  "total_samples": 1406,
+  "correct_count": 1216,
+  "incorrect_count": 190,
+  "overall_error_rate": 0.1351,
+  "most_confused_class_pairs": [
+    {
+      "true_class": "naan",
+      "predicted_class": "chapati",
+      "count": 16,
+      "true_index": 15,
+      "predicted_index": 2
+    },
+    {
+      "true_class": "chicken_curry",
+      "predicted_class": "kadai_paneer",
+      "count": 5,
+      "true_index": 3,
+      "predicted_index": 12
+    },
+    {
+      "true_class": "paneer_curry",
+      "predicted_class": "kadai_paneer",
+      "count": 5,
+      "true_index": 17,
+      "predicted_index": 12
+    },
+    {
+      "true_class": "chicken_curry",
+      "predicted_class": "pani_puri",
+      "count": 4,
+      "true_index": 3,
+      "predicted_index": 18
+    },
+    {
+      "true_class": "dal",
+      "predicted_class": "dal_makhani",
+      "count": 4,
+      "true_index": 5,
+      "predicted_index": 6
+    },
+    {
+      "true_class": "naan",
+      "predicted_class": "pizza",
+      "count": 4,
+      "true_index": 15,
+      "predicted_index": 20
+    },
+    {
+      "true_class": "pav_bhaji",
+      "predicted_class": "dal_makhani",
+      "count": 4,
+      "true_index": 19,
+      "predicted_index": 6
+    },
+    {
+      "true_class": "chapati",
+      "predicted_class": "naan",
+      "count": 3,
+      "true_index": 2,
+      "predicted_index": 15
+    },
+    {
+      "true_class": "chicken_curry",
+      "predicted_class": "biryani",
+      "count": 3,
+      "true_index": 3,
+      "predicted_index": 0
+    },
+    {
+      "true_class": "chicken_curry",
+      "predicted_class": "dal",
+      "count": 3,
+      "true_index": 3,
+      "predicted_index": 5
+    }
+  ],
+  "lowest_recall_classes": [
+    {
+      "class": "paneer_curry",
+      "recall": 0.7105,
+      "support": 38,
+      "false_negatives": 11
+    },
+    {
+      "class": "vada_pav",
+      "recall": 0.7297,
+      "support": 37,
+      "false_negatives": 10
+    },
+    {
+      "class": "naan",
+      "recall": 0.7368,
+      "support": 95,
+      "false_negatives": 25
+    },
+    {
+      "class": "kadai_paneer",
+      "recall": 0.74,
+      "support": 50,
+      "false_negatives": 13
+    },
+    {
+      "class": "chicken_curry",
+      "recall": 0.7733,
+      "support": 150,
+      "false_negatives": 34
+    }
+  ],
+  "lowest_precision_classes": [
+    {
+      "class": "chapati",
+      "precision": 0.6552,
+      "support": 48,
+      "false_positives": 20
+    },
+    {
+      "class": "dal_makhani",
+      "precision": 0.6897,
+      "support": 42,
+      "false_positives": 18
+    },
+    {
+      "class": "kadai_paneer",
+      "precision": 0.6981,
+      "support": 50,
+      "false_positives": 16
+    },
+    {
+      "class": "biryani",
+      "precision": 0.7111,
+      "support": 34,
+      "false_positives": 13
+    },
+    {
+      "class": "pizza",
+      "precision": 0.7872,
+      "support": 41,
+      "false_positives": 10
+    }
+  ],
+  "highest_f1_classes": [
+    {
+      "class": "dhokla",
+      "f1_score": 0.9771,
+      "support": 66
+    },
+    {
+      "class": "idli",
+      "f1_score": 0.9565,
+      "support": 45
+    },
+    {
+      "class": "jalebi",
+      "f1_score": 0.9518,
+      "support": 82
+    },
+    {
+      "class": "burger",
+      "f1_score": 0.9423,
+      "support": 49
+    },
+    {
+      "class": "chole_bhature",
+      "f1_score": 0.9399,
+      "support": 94
+    }
+  ],
+  "classes_with_largest_errors": [
+    {
+      "class": "chicken_curry",
+      "total_errors": 38,
+      "fn": 34,
+      "fp": 4,
+      "support": 150
+    },
+    {
+      "class": "chapati",
+      "total_errors": 30,
+      "fn": 10,
+      "fp": 20,
+      "support": 48
+    },
+    {
+      "class": "kadai_paneer",
+      "total_errors": 29,
+      "fn": 13,
+      "fp": 16,
+      "support": 50
+    },
+    {
+      "class": "naan",
+      "total_errors": 29,
+      "fn": 25,
+      "fp": 4,
+      "support": 95
+    },
+    {
+      "class": "pav_bhaji",
+      "total_errors": 29,
+      "fn": 16,
+      "fp": 13,
+      "support": 82
+    }
+  ]
+}
